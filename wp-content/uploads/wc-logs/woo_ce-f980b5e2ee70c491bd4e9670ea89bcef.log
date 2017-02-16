@@ -1,0 +1,27 @@
+01-27-2017 @ 08:20:28 - Fatal error: A fatal PHP error was encountered during the export process, we couldn't detect or diagnose it further. - PHP response: Uncaught Error: Class 'ZipArchive' not found in /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/classes/PHPExcel/Writer/Excel2007.php:227
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/exporter-deluxe.php(1006): PHPExcel_Writer_Excel2007->save('/tmp/phpxltmpmy...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(298): woo_cd_admin_init('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 /var/www/html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin.php(154): do_action('admin_init')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/classes/PHPExcel/Writer/Excel2007.php on line 227
+01-27-2017 @ 08:59:16 - Fatal error: A fatal PHP error was encountered during the export process, we couldn't detect or diagnose it further. - PHP response: Uncaught Error: Class 'ZipArchive' not found in /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/classes/PHPExcel/Writer/Excel2007.php:227
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/exporter-deluxe.php(1006): PHPExcel_Writer_Excel2007->save('/tmp/phpxltmpUJ...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(298): woo_cd_admin_init('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 /var/www/html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin.php(154): do_action('admin_init')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/classes/PHPExcel/Writer/Excel2007.php on line 227
+02-03-2017 @ 06:54:29 - Fatal error: A fatal PHP error was encountered during the export process, we couldn't detect or diagnose it further. - PHP response: Uncaught Error: Class 'ZipArchive' not found in /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/classes/PHPExcel/Writer/Excel2007.php:227
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/exporter-deluxe.php(581): PHPExcel_Writer_Excel2007->save('/tmp/phpxltmpKf...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(298): woo_cd_admin_init('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 /var/www/html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin.php(154): do_action('admin_init')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-store-exporter-deluxe/classes/PHPExcel/Writer/Excel2007.php on line 227

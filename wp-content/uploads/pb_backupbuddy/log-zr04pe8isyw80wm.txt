@@ -1,0 +1,10 @@
+[Oct 7, 2016 14:04:44 0-error] <span class="pb_label pb_label">Important</span> <b>Set an ImportBuddy password on the <a href="https://behealthy.today/wp-admin/admin.php?page=pb_backupbuddy_settings">Settings</a> page before attempting to Migrate to a new server.</b> Error Code: 
+[Oct 7, 2016 14:06:29 0-error] <span class="pb_label pb_label">Important</span> <b>Set an ImportBuddy password on the <a href="https://behealthy.today/wp-admin/admin.php?page=pb_backupbuddy_settings">Settings</a> page before attempting to Migrate to a new server.</b> Error Code: 
+[Oct 10, 2016 16:50:12 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
+[Oct 11, 2016 17:43:05 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
+[Oct 12, 2016 16:44:19 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
+[Oct 13, 2016 16:47:24 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
+[Oct 14, 2016 19:24:28 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
+[Oct 15, 2016 17:22:53 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
+[Oct 16, 2016 19:12:42 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
+[Oct 17, 2016 16:24:54 0-error] [] Error retrieving fileoptions file `/var/www/html/wp-content/uploads/pb_backupbuddy/fileoptions/6zp836c9id.txt`. Err 335353266.
