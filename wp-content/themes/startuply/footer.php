@@ -59,64 +59,36 @@
 
 
 			<div class="row">
-
-			<?php /*
-
-			$layout_sub_footer = array(4,4,4);
-
-			$widget_number = 1;
-			$class_prefix = 'col-sm-';
-			$active_widgets = 0;
-
-			foreach ($layout_sub_footer as $col) {
-				echo '<div class="'.$class_prefix.$col.'">';
-
-				if(is_active_sidebar("sidebar_sub_footer_$widget_number")) {
-					dynamic_sidebar("sidebar_sub_footer_$widget_number");
-					$active_widgets++;
-				} else {
-					echo "&nbsp;";
-				}
-				echo '</div>';
-				$widget_number++;
-			} 
-			if ($active_widgets < 1){
-				echo '<div class=col-sm-12 text-center" style="margin-top:-20px;"><p class="text-center" style="color: #888585;">Please assign widgets to sub footer through Appearance -> Widgets or disable it in Startuply options -> Footer -> Sub footer</p></div>';
-			} */
-			?>
-			<div class="col-md-4 about-us footer-col">
-				<h4 class="about">ABOUT US</h4>
-				<div class="foot-divide 33by2"></div>
-				<div class="info-cont">
-					<?php dynamic_sidebar("sidebar-footer1"); ?>
-				</div>
-			</div>
-			<div class="col-md-5 information footer-col">
-				<h4 class="about">INFORMATION</h4>
-				<div class="foot-divide 33by2"></div>
-				<div class="col-md-5">
+				<div class="col-md-4 about-us footer-col">
+					<h4 class="about">ABOUT US</h4>
+					<div class="foot-divide 33by2"></div>
 					<div class="info-cont">
-						<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-1' ) ); ?>
+						<?php dynamic_sidebar("sidebar-footer1"); ?>
 					</div>
 				</div>
-				<div class="col-md-7">
+				<div class="col-md-5 information footer-col">
+					<h4 class="about">INFORMATION</h4>
+					<div class="foot-divide 33by2"></div>
+					<div class="col-md-5">
+						<div class="info-cont">
+							<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-1' ) ); ?>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="info-cont">
+							<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-2' ) ); ?>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 contact-us footer-col">
+					<h4 class="about">CONTACT US</h4>
+					<div class="foot-divide 33by2"></div>
 					<div class="info-cont">
-						<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-2' ) ); ?>
+						<?php dynamic_sidebar("sidebar-footer3"); ?>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 contact-us footer-col">
-				<h4 class="about">CONTACT US</h4>
-				<div class="foot-divide 33by2"></div>
-				<div class="info-cont">
-					<?php dynamic_sidebar("sidebar-footer3"); ?>
-				</div>
-			</div>
-
-
-
 		</div>
-	</div>
 	<?php } ?>
 	<div class="back-to-top"><a href="#"><i class="fa fa-angle-up fa-3x"></i></a></div>
 
