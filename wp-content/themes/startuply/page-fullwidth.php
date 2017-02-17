@@ -5,9 +5,6 @@
 
 get_header(); ?>
 
-<header class="entry-header">
-	<?php vivaco_ultimate_title(); ?>
-</header><!-- .entry-header -->
 
 <div id="main-content">
 	<div class="container-fluid">

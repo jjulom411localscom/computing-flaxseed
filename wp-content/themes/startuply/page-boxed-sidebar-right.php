@@ -6,9 +6,6 @@
 get_header();
 $comments_count = wp_count_comments(get_the_ID());
 ?>
-<header class="entry-header">
-	<?php vivaco_ultimate_title(); ?>
-</header><!-- .entry-header -->
 <div id="main-content">
 	<div class="container inner">
 		<div class="col-md-8 col-sm-12 blogs">
