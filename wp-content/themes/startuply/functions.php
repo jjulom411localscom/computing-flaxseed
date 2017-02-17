@@ -419,10 +419,7 @@ if( !function_exists('startuply_enqueue_styles') ) {
 		wp_enqueue_style('js_composer_custom_css');
 
 		/* Startuply styles */
-		wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/*get_template_directory_uri() . '/css/lib/bootstrap.min.css'*/);
-		/*wp_enqueue_style('custom_animate', get_template_directory_uri() . '/css/animate.css');
-		wp_enqueue_style('custom_prettyphoto', get_template_directory_uri() . '/css/lib/prettyPhoto.css');
-		wp_enqueue_style('revolution', get_template_directory_uri() . '/css/revolution-styles.css');*/
+		wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 		wp_enqueue_style('revolution', get_template_directory_uri() . '/css/combined-styles.css');
 
 		wp_enqueue_style('startuply_custom', get_stylesheet_directory_uri() . '/style.css');
@@ -440,14 +437,6 @@ if( !function_exists('startuply_enqueue_styles') ) {
 			$enqueue_css_dir = THEME_CACHE_DIR . '/' . THEME_OPTIONS_CSS . '.css';
 		}
 
-		//check if theme options exist
-		/*
-		$startuply_theme_options_css_time = get_option('startuply-options-css');
-		if(!isset($startuply_theme_options_css_time) || strlen($startuply_theme_options_css_time) == 0 || !file_exists($enqueue_css_dir) || ($startuply_theme_options_css_time < $lastmodify) ) {
-			update_option('startuply-options-css', $lastmodify);
-			startuply_update_less();
-		}
-		*/
 		
 		wp_enqueue_style('startuply_option', $enqueue_css);
 	
@@ -474,8 +463,7 @@ if( !function_exists('startuply_fonts') ) {
 		$protocol = is_ssl() ? 'https' : 'http';
 		wp_enqueue_style( 'startuply_ptsans', "$protocol://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" );
 		wp_enqueue_style( 'startuply_lato', "$protocol://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" );
-		wp_enqueue_style('startuply_fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'/*get_template_directory_uri() . '/fonts/FontAwesome/font-awesome.min.css'*/);
-		/*wp_enqueue_style('startuply_lineicons', get_template_directory_uri() . '/fonts/LineIcons/font-lineicons.css');*/
+		wp_enqueue_style('startuply_fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	}
 	add_action( 'wp_enqueue_scripts', 'startuply_fonts' );
 }
@@ -540,7 +528,7 @@ if( !function_exists('startuply_add_theme_js') ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
 
-			wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'/*get_template_directory_uri().'/js/lib/bootstrap.min.js'*/, array(), '', true);
+			wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '', true);
 			wp_register_script('nav', get_template_directory_uri().'/js/lib/jquery.nav.js', array(), '', true);
 			wp_register_script('social-share', get_template_directory_uri().'/js/lib/social-share.js', array(), '', true);
 			wp_register_script('headhesive', get_template_directory_uri().'/js/lib/headhesive.min.js', array(), '', true);
@@ -584,7 +572,6 @@ if( !function_exists('startuply_add_theme_js') ) {
 			wp_enqueue_script('vsc-parallax', array('jquery'), true);
 			wp_enqueue_script('vsc-custom-parallax', array('jquery'), true);
 			wp_enqueue_script('vsc-isotope', array('jquery'), true);
-			//wp_enqueue_script('appear', array('jquery'), true);
 			wp_enqueue_script('vsc-custom-isotope-portfolio', array('jquery'), true);
 			wp_enqueue_script('modal-box', array('jquery'), true);
 
@@ -731,10 +718,6 @@ if(function_exists('vc_set_shortcodes_templates_dir')) {
 	vc_set_shortcodes_templates_dir(get_template_directory() . '/engine/shortcodes/vc_templates/');
 }
 
-/* disable VC front-end editor */
-// if(function_exists('vc_disable_frontend')) {
-// 	vc_disable_frontend();
-// }
 
 /* Add Google Analytics Tracking code */
 if( !function_exists('startuply_google_analytics_code') ) {
@@ -1356,12 +1339,6 @@ $startuply_menu_data = array(  // rearrange this menu to new order
 
 
 	// separator
-	/*
-	array(
-		'slug' => 'separator-last', // Last separator
-	),
-	*/
-	// separator
 
 	// other plugin pages
 	array(
@@ -1609,142 +1586,7 @@ if ( ! function_exists( 'startuply_menu_style' ) ) {
 		
 	}
 }
-/*
 
-if ( ! function_exists( 'startuply_theme_logo' ) ) {
-	function startuply_theme_logo($page_id) {
-
-		$prefix = 'vivaco_';
-				$page_logo 			= get_field($prefix . 'main_logo', $page_id)['url'];
-		$page_logo_retina 	= get_field($prefix . 'main_logo_retina', $page_id)['url'];
-		$page_sticky_logo 	= get_field($prefix . 'sticky_logo', $page_id)['url'];
-		$page_sticky_retina = get_field($prefix . 'sticky_logo_retina', $page_id)['url'];
-
-		$options = startuply_get_all_option();
-		
-
-		
-		// Startuply logo
-		if(!empty($page_logo)) {
-			$logo_src = $page_logo;
-		}
-		else {
-
-			if ( !empty($options['site_logo']) ) {
-				$logo_src = $options['site_logo'];
-			}
-		}
-
-		if(!empty($logo_src)) {
-
-			$logo_path = $_SERVER['DOCUMENT_ROOT'] . parse_url($logo_src, PHP_URL_PATH);
-
-			if( file_exists($logo_path) ) {
-				$logo_size = getimagesize($logo_path);
-				$logo_width = $logo_size[0];
-				$logo_height = $logo_size[1];
-				$logo_img = '<img src="' . $logo_src . '" width="' . $logo_width . '" height="' . $logo_height . '" alt="logo" />';
-			}
-		}
-
-
-		if(!empty($page_sticky_logo)) {
-			$logo_sticky_src = $page_sticky_logo;
-		}
-		else {
-			if ( !empty($options['site_sticky_logo']) ) {
-				$logo_sticky_src = $options['site_sticky_logo'];
-			} else if ( !empty($logo_src) ){
-				$logo_sticky_src = $logo_src;
-			}
-		}
-
-
-		if ( !empty($logo_sticky_src) ) {
-			$logo_sticky_path = $_SERVER['DOCUMENT_ROOT'] . parse_url($logo_sticky_src, PHP_URL_PATH);
-
-			if( file_exists($logo_sticky_path) ) {
-				$logo_sticky_size = getimagesize($logo_sticky_path);
-				$logo_sticky_width = $logo_sticky_size[0];
-				$logo_sticky_height = $logo_sticky_size[1];
-				$logo_sticky_img = '<img src="' . $logo_sticky_src . '" width="' . $logo_sticky_width . '" height="' . $logo_sticky_height . '" alt="logo" class="sticky-logo"/>';
-			}
-		}
-
-		if(!empty($page_logo_retina)) {
-			$retina_logo_src = $page_logo_retina;
-		}
-		else {
-			if(!empty($options['retina_site_logo'])) {
-				$retina_logo_src = $options['retina_site_logo'];
-			}
-		}
-
-		if ( !empty($retina_logo_src) ) {
-			
-			$retina_logo_path = $_SERVER['DOCUMENT_ROOT'] . parse_url($retina_logo_src, PHP_URL_PATH);
-
-			if( file_exists($retina_logo_path) ) {
-				$retina_logo_size = getimagesize($retina_logo_path);
-				$retina_logo_width = floor($retina_logo_size[0] / 2);
-				$retina_logo_height = floor($retina_logo_size[1] / 2);
-				$retina_logo_img = '<img src="' . $retina_logo_src . '" width="' . $retina_logo_width . '" height="' . $retina_logo_height . '" alt="logo" class="retina" />';
-			}
-		}
-
-		if(!empty($page_sticky_retina)) {
-			$retina_logo_sticky_src = $page_sticky_retina;
-		}
-		else {
-			if(!empty($options['retina_site_sticky_logo'])) {
-				$retina_logo_sticky_src = $options['retina_site_sticky_logo'];
-			}
-		}
-
-		if ( !empty($retina_logo_sticky_src) ) {
-			
-			$retina_logo_sticky_path = $_SERVER['DOCUMENT_ROOT'] . parse_url($retina_logo_sticky_src, PHP_URL_PATH);
-
-			if( file_exists($retina_logo_sticky_path) ) {
-				$retina_logo_sticky_size = getimagesize($retina_logo_sticky_path);
-				$retina_logo_sticky_width = floor($retina_logo_sticky_size[0] / 2);
-				$retina_logo_sticky_height = floor($retina_logo_sticky_size[1] / 2);
-				$retina_logo_sticky_img = '<img src="' . $retina_logo_sticky_src . '" width="' . $retina_logo_sticky_width . '" height="' . $retina_logo_sticky_height . '" alt="logo" class="sticky-logo retina" />';
-			}
-		}
-
-		if ( empty($retina_logo_src) && !empty($logo_src) ) {
-			$retina_logo_img = '<img src="' . $logo_src . '" width="' . $logo_width . '" height="' . $logo_height . '" alt="logo" class="retina" />';
-		}
-
-		if ( empty($retina_logo_sticky_src) && !empty($logo_sticky_src) ) {
-			$retina_logo_sticky_img = '<img src="' . $logo_sticky_src . '" width="' . $logo_sticky_width . '" height="' . $logo_sticky_height . '" alt="logo" class="sticky-logo retina" />';
-		}
-
-		if ( empty($logo_img) ) {
-			$logo_img = '<img src="' . get_template_directory_uri() . '/images/logo.png" width="117" height="28" alt="logo">';
-		}
-
-		if ( empty($retina_logo_img) ) {
-			$retina_logo_img = '<img src="' . get_template_directory_uri() . '/images/logo-retina.png" width="117" height="28" alt="logo" class="retina">';
-		}
-
-		if ( empty($logo_sticky_img) ) {
-			$logo_sticky_img = '<img src="' . get_template_directory_uri() . '/images/logo.png" width="117" height="28" alt="logo" class="sticky-logo">';
-		}
-
-		if ( empty($retina_logo_sticky_img) ) {
-			$retina_logo_sticky_img = '<img src="' . get_template_directory_uri() . '/images/logo-retina.png" width="117" height="28" alt="logo" class="sticky-logo retina">';
-		}
-		
-		echo $logo_img; 
-		echo $retina_logo_img; 
-		echo $logo_sticky_img; 
-		echo $retina_logo_sticky_img;
-		
-	}
-}
-*/
 
 
 //Remove paddings for rows on mobiles 
@@ -1777,22 +1619,6 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-/*Grouped JS source (from plugins and the theme) 11.2.2016*/
-/*
-function removejscssfile(filename, filetype){
-    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
-    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
-    var allsuspects=document.getElementsByTagName(targetelement)
-    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
-    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
-        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
-    }
-}
- 
-removejscssfile("woocommerce.min.js", "js") //remove occurences on page
-removejscssfile("vivaco-animations.js", "js") //remove occurences on page
-removejscssfile("custom-parallax.js", "js") //remove occurences on page*/
-/* END Grouped JS source (from plugins and the theme) 11.2.2016*/
 /*Adding Fonts*/
 function add_fonts_google(){
 	wp_enqueue_style('MavenPro', 'https://fonts.googleapis.com/css?family=Maven+Pro');
