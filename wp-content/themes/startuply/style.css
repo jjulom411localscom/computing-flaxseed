@@ -699,7 +699,8 @@ article {
     color: #fff
 }
 .bypostauthor,
-.u-offer-form .nf-response-msg{
+.u-offer-form .nf-response-msg,
+.sub-footer .textwidget{
     color: #676767
 }
 .alignright {
@@ -14126,4 +14127,13 @@ a.btn-twelve-ingred:hover{
         display: block;
         width: 100%;
     }
+}
+.info-cont li.menu-item {
+    line-height: 24px;
+}
+.footer-col{
+    margin-bottom: 34px
+}
+.about-us .widgettitle{
+    display: none;
 }

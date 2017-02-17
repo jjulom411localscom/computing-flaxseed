@@ -84,16 +84,28 @@
 				echo '<div class=col-sm-12 text-center" style="margin-top:-20px;"><p class="text-center" style="color: #888585;">Please assign widgets to sub footer through Appearance -> Widgets or disable it in Startuply options -> Footer -> Sub footer</p></div>';
 			} */
 			?>
-			<div class="col-md-4 about-us">
-
+			<div class="col-md-4 about-us footer-col">
+				<h4 class="about">ABOUT US</h4>
+				<div class="foot-divide 33by2"></div>
+				<div class="info-cont">
+					<?php dynamic_sidebar("sidebar-footer1"); ?>
+				</div>
 			</div>
-			<div class="col-md-4 information">
+			<div class="col-md-5 information footer-col">
 				<h4 class="about">INFORMATION</h4>
 				<div class="foot-divide 33by2"></div>
-				<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu' ) ); ?>
-
+				<div class="col-md-6">
+					<div class="info-cont">
+						<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-1' ) ); ?>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="info-cont">
+						<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-2' ) ); ?>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 contact-us">
+			<div class="col-md-3 contact-us footer-col">
 
 			</div>
 

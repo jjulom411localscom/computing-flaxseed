@@ -317,7 +317,8 @@ if( !function_exists('startuply_register_menus') ) {
 /*Register Footer menu 2.16.2017*/
 add_action( 'after_setup_theme', 'register_behealthy_footer_menu' );
 function register_behealthy_footer_menu() {
-  register_nav_menu( 'behealthy_footer_menu', __( 'Behealthy Footer Menu', 'theme-slug' ) );
+  register_nav_menu( 'behealthy_footer_menu_col-1', __( 'Behealthy Footer Menu Column 1', 'theme-slug' ) );
+  register_nav_menu( 'behealthy_footer_menu_col-2', __( 'Behealthy Footer Menu Column 2', 'theme-slug' ) );
 }
 
 /* Initializing custom widgets */
@@ -2037,6 +2038,7 @@ require get_template_directory() . '/inc/behealhty_posts_widget.php';
 require get_template_directory() . '/inc/embed-code.php';
 require get_template_directory() . '/inc/metabox_ingredient.php';
 require get_template_directory() . '/inc/redirectAffiliate.php';
+require get_template_directory() . '/inc/bh_sidebars.php';
 
 
 //Login Form Style
@@ -2044,16 +2046,3 @@ function my_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/inc/style-login.css' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
-//Add 404 page sidebar
-add_action( 'widgets_init', 'widget_404_add' );
-function widget_404_add() {
-    register_sidebar( array(
-        'name' => __( '404 Page', 'theme-slug' ),
-        'id' => 'sidebar-404',
-        'description' => __( 'Widgets in this area will be shown on 404 Page.', 'theme-slug' ),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div>',
-	'before_title'  => '<h2 class="widgettitle">',
-	'after_title'   => '</h2>',
-    ) );
-}
