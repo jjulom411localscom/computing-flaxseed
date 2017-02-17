@@ -2039,6 +2039,7 @@ require get_template_directory() . '/inc/embed-code.php';
 require get_template_directory() . '/inc/metabox_ingredient.php';
 require get_template_directory() . '/inc/redirectAffiliate.php';
 require get_template_directory() . '/inc/bh_sidebars.php';
+require get_template_directory() . '/inc/behealhty_contact_widget.php';
 
 
 //Login Form Style

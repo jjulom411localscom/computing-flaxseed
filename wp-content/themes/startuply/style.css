@@ -14134,6 +14134,13 @@ a.btn-twelve-ingred:hover{
 .footer-col{
     margin-bottom: 34px
 }
-.about-us .widgettitle{
+.footer-col .widgettitle{
     display: none;
+}
+.contact-list{
+    list-style: none;
+}
+.contact-list li {
+    line-height: 24px;
+    color: #676767;
 }

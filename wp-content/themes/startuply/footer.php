@@ -94,19 +94,23 @@
 			<div class="col-md-5 information footer-col">
 				<h4 class="about">INFORMATION</h4>
 				<div class="foot-divide 33by2"></div>
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<div class="info-cont">
 						<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-1' ) ); ?>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-7">
 					<div class="info-cont">
 						<?php wp_nav_menu( array( 'theme_location' => 'behealthy_footer_menu_col-2' ) ); ?>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 contact-us footer-col">
-
+				<h4 class="about">CONTACT US</h4>
+				<div class="foot-divide 33by2"></div>
+				<div class="info-cont">
+					<?php dynamic_sidebar("sidebar-footer3"); ?>
+				</div>
 			</div>
 
 

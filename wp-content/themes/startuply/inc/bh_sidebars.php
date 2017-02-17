@@ -24,4 +24,13 @@ function widget_footer_add() {
 	'before_title'  => '<h4 class="widgettitle">',
 	'after_title'   => '</h4>',
     ) );
+    register_sidebar( array(
+        'name' => __( 'Footer Column 3', 'theme-slug' ),
+        'id' => 'sidebar-footer3',
+        'description' => __( 'Widgets in this area will be shown on Footer Column 3.', 'theme-slug' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h4 class="widgettitle">',
+	'after_title'   => '</h4>',
+    ) );
 }
