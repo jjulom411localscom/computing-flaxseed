@@ -760,8 +760,6 @@ jQuery(document).ready(function($) {
 //source : https://behealthy.today/wp-content/themes/startuply/js/custom-parallax.js?ver=1.1.3
 jQuery(window).load(function(){jQuery('div[class*="parallax-bag"]').each(function(){var a=jQuery(this),i=a.data("token"),r=window["vsc_parallax_"+i];/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||(jQuery(".parallax-bag-"+r.id).parallax("50%",.4,!1),jQuery(".parallax-bag-"+r.id).css({"background-attachment":"fixed"})),/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)&&jQuery(".parallax-bag-"+r.id).css({"background-attachment":"scroll"})})});
 
-//source : https://behealthy.today/wp-includes/js/wpdialog.min.js?ver=4.5.4
-/*!function(a){a.widget("wp.wpdialog",a.ui.dialog,{open:function(){this.isOpen()||!1===this._trigger("beforeOpen")||(this._super(),this.element.focus(),this._trigger("refresh"))}}),a.wp.wpdialog.prototype.options.closeOnEscape=!1}(jQuery); */
 
 $(document).ready(function(){
     $('.row-inside-dg .vsc-text-icon.icon-left').append('<div class="diagon-bg"></div>');
