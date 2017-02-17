@@ -19,9 +19,6 @@ $comments_count = wp_count_comments(get_the_ID());
 	<div class="container inner">
 		<div class="col-md-8 blogs">
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php vivaco_ultimate_title(); ?>
-				</header><!-- .entry-header -->
 
 				<div class="entry-content" itemprop="text">
 					<?php if ($thumbnail_url) : ?>
