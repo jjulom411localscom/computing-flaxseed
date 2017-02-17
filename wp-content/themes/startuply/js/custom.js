@@ -761,6 +761,7 @@ jQuery(document).ready(function($) {
 jQuery(window).load(function(){jQuery('div[class*="parallax-bag"]').each(function(){var a=jQuery(this),i=a.data("token"),r=window["vsc_parallax_"+i];/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||(jQuery(".parallax-bag-"+r.id).parallax("50%",.4,!1),jQuery(".parallax-bag-"+r.id).css({"background-attachment":"fixed"})),/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)&&jQuery(".parallax-bag-"+r.id).css({"background-attachment":"scroll"})})});
 
 
+
 $(document).ready(function(){
     $('.row-inside-dg .vsc-text-icon.icon-left').append('<div class="diagon-bg"></div>');
     $('.dg-one-scoop .btn-add-cart').after('<span class="mbg">*MONEY BACK GUARANTEED</span>');
@@ -768,6 +769,19 @@ $(document).ready(function(){
     append_quote.append('<div class="quote_hold"></div>');
     $('.sub-footer').append('<div class="copyright-block"><div class="container"><div class="cright">Copyright 2017 © Be Healthy Today Inc. - All right reserved</div></div></div>');
 
+    /*var lastScrollTop = 0;
+    $(window).scroll(function(event){
+       var st = $(this).scrollTop();
+       if (st > lastScrollTop){
+           // downscroll code
+           $('header > .navigation.navigation-header').addClass('fixmenu-clone');
+       } else {
+          // upscroll code
+          $('header > .navigation.navigation-header').removeClass('fixmenu-clone');
+       }
+       lastScrollTop = st;
+       console.log(st);
+    });*/
     $('.cart-block form .shop_table').after('<div class="v-desc"><a href="/product/daily-green/">View Product Description</div></a>');
     $('.cart-block .cart_totals > h2').replaceWith('<h2>Order Totals</h2>');
 
