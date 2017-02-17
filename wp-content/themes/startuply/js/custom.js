@@ -770,18 +770,6 @@ $(document).ready(function(){
     append_quote.append('<div class="quote_hold"></div>');
     $('.sub-footer').append('<div class="copyright-block"><div class="container"><div class="cright">Copyright 2017 © Be Healthy Today Inc. - All right reserved</div></div></div>');
 
-    var lastScrollTop = 0;
-    $(window).scroll(function(event){
-       var st = $(this).scrollTop();
-       if (st > lastScrollTop){
-           // downscroll code
-           $('header > .navigation.navigation-header').addClass('fixmenu-clone');
-       } else {
-          // upscroll code
-          $('header > .navigation.navigation-header').removeClass('fixmenu-clone');
-       }
-       lastScrollTop = st;
-    });
     $('.cart-block form .shop_table').after('<div class="v-desc"><a href="/product/daily-green/">View Product Description</div></a>');
     $('.cart-block .cart_totals > h2').replaceWith('<h2>Order Totals</h2>');
 
