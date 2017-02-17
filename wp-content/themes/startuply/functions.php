@@ -405,38 +405,6 @@ if(!function_exists('startuply_register_sidebars')) {
 				));
 			}
 		}
-		if (startuply_option('sub_footer_on', '1') === '1') {
-
-			$layout_sub_footer = array(4,4,4);
-
-			for ($widget_number = 1; $widget_number < count($layout_sub_footer) + 1; $widget_number++) {
-				register_sidebar(array(
-					'id' => "sidebar_sub_footer_$widget_number",
-					'name' => "Sub footer Sidebar $widget_number",
-					'class' => 'fa',
-					'before_widget' => '<aside id="%1$s" class="widget %2$s"><div class="widgetBody clearfix">',
-					'after_widget' => '</div></aside>',
-					'before_title' => '<div class="footer-title">',
-					'after_title' => '</div>',
-				));
-			}
-		}
-		if (startuply_option('sub_footer_on', '4') === '4') {
-
-			$layout_sub_footer = array(4,4,4);
-
-			for ($widget_number = 4; $widget_number < count($layout_sub_footer) + 4; $widget_number++) {
-				register_sidebar(array(
-					'id' => "sidebar_sub_footer_$widget_number",
-					'name' => "Sub footer Sidebar $widget_number",
-					'class' => 'fa',
-					'before_widget' => '<aside id="%1$s" class="widget %2$s"><div class="widgetBody clearfix">',
-					'after_widget' => '</div></aside>',
-					'before_title' => '<div class="footer-title">',
-					'after_title' => '</div>',
-				));
-			}
-		}
 	}
 	add_action( 'widgets_init', 'startuply_register_sidebars' );
 }
